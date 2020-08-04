@@ -1,8 +1,10 @@
-name := "ScalaTemplate"
+name := "spark-data-pipeline-scala"
 
 version := "0.2"
 
-scalaVersion := "2.12.4"
+scalaVersion := "2.12.12"
+
+mainClass in assembly := Some("Main")
 
 scalacOptions ++= Seq("-deprecation", "-feature", "-unchecked")
 
@@ -22,3 +24,8 @@ libraryDependencies ++= Seq(
   "org.scalanlp" %% "breeze-viz" % "0.13.1", //% "provided",
   "com.lihaoyi" %% "ammonite-ops" % "1.0.0"
 )
+
+assemblyMergeStrategy in assembly := {
+ case PathList("META-INF", xs @ _*) => MergeStrategy.discard
+ case x => MergeStrategy.first
+}
