@@ -22,7 +22,8 @@ libraryDependencies ++= Seq(
   "org.scalanlp" %% "breeze" % "0.13.2", //% "provided",
   "org.scalanlp" %% "breeze-natives" % "0.13.1", //% "provided",
   "org.scalanlp" %% "breeze-viz" % "0.13.1", //% "provided",
-  "com.lihaoyi" %% "ammonite-ops" % "1.0.0"
+  "com.lihaoyi" %% "ammonite-ops" % "1.0.0",
+  "org.scala-lang.modules" %% "scala-xml" % "1.2.0"
 )
 
 assemblyMergeStrategy in assembly := {
